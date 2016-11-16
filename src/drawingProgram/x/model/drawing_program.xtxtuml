@@ -1,0 +1,375 @@
+package drawingProgram.x.model;
+
+import drawingProgram.main.GUI;
+import drawingProgram.main.GUIInterface;
+import drawingProgram.x.model.XPicture.Disabled;
+import drawingProgram.x.model.XPicture.Displayed;
+import drawingProgram.x.model.XPicture.Initialize;
+import drawingProgram.x.model.XProject.Closed;
+import drawingProgram.x.model.XProject.Init;
+import drawingProgram.x.model.XProject.Opened;
+
+signal ProjectOpen;
+
+signal ProjectClose;
+
+signal PictureDisplayed;
+
+signal PictureDisabled;
+
+class XProject {
+
+	GUIInterface gui;
+
+	XProject() {
+		gui = new GUI();
+		XPicture picture = create(XPicture);
+		link(ProjectPicture.project, this, ProjectPicture.picture, picture);
+		start(picture);
+	}
+
+	initial Init;
+
+	state Opened {
+		entry {
+
+			log("\tProject enters state: 'Opened'");
+		}
+		exit {
+
+		}
+	};
+
+	state Closed {
+		entry {
+			log("\tProject enters state: 'Closed'");
+		}
+		exit {
+
+			log("\tPorject exits state: 'Closed'");
+		}
+	};
+
+	transition Init_Closed {
+		from Init;
+		to Closed;
+		effect {
+			log("\tProject: initializing...");
+		}
+	}
+
+	transition Closed_Opened {
+		from Closed;
+		to Opened;
+		trigger ProjectOpen;
+		effect {
+			
+			log("\tProject: switching to open...");
+		}
+	}
+
+	transition Opened_Closed {
+		from Opened;
+		to Closed;
+		trigger ProjectClose;
+		effect {
+			log("\tProject: switching to close ...");
+		}
+	}
+
+	public void New() {}
+
+	public void Open(String P) {}
+
+	public void Import(String FN, String P) {}
+
+	public void Export(String E) {}
+
+	public void Close() {}
+
+	public void Exit() {}
+
+}
+
+class XPicture {
+
+	initial Initialize;
+
+	state Displayed {
+		entry {
+			log("\tPicture enters state: 'Displayed'");
+		}
+		exit {
+			log("\tPicture exits state: 'Displayed'");
+		}
+	}
+
+	state Disabled {
+		entry {
+			log("\tPicture enters state: 'Disabled'");
+		}
+		exit {
+			log("\tPicture exits state: 'Disabled'");
+		}
+	}
+
+	transition Initialize_Disabled {
+		from Initialize;
+		to Disabled;
+		effect {
+			log("\tPicture: initializing...");
+		}
+	}
+
+	transition Disabled_Displayed {
+		from Disabled;
+		to Displayed;
+		trigger PictureDisplayed;
+		effect {
+			this->(ProjectPicture.project).selectAny().gui.PictureDisplayed();
+			log("\tPicture: switching to display...");
+		}
+	}
+
+	transition Displayed_Disabled {
+		from Displayed;
+		to Disabled;
+		trigger PictureDisabled;
+		effect {
+			this->(ProjectPicture.project).selectAny().gui.PictureDisabled();
+			log("\tPicture: switching to disable ...");
+		}
+	}
+
+	String FileName;
+
+	String Extension;
+
+	String Path;
+
+	public void Save(String FN, String P) {}
+
+	public void SaveAs(String FN, String E, String P) {}
+
+	public void SelectOne() {}
+
+	public void SelectAll() {}
+
+	public void UnSelectAll() {}
+
+	public void MoveToFront() {}
+
+	public void MoveToBack() {}
+
+	public void Undo() {}
+
+	public void Redo() {}
+
+	public void Delete() {}
+
+}
+
+class XShape {
+
+	public void Draw() {}
+
+	public void MoveShape(int NewX, int NewY) {}
+
+	public void Reshape() {}
+
+	public void ChangeWidth(int NewLD) {}
+
+	public void ChangeOpacity(int Op) {}
+
+	public void ChangeColor(String NewColor) {}
+
+	public void ChangeSize(int LS) {}
+
+	public void FillColorShape() {}
+
+}
+
+class XText extends XShape {
+
+	String Text;
+
+	String FontFamily;
+
+	String Style;
+
+	String Weight;
+
+	int Size;
+
+	public void Draw() {}
+
+	public void MoveShape(int NewX, int NewY) {}
+
+	public void Reshape() {}
+
+	void EditText() {}
+
+	void ChangeTextFamily(String T) {};
+
+	void ChangeFont(String F) {}
+
+	void ChangeStyle(String S) {}
+
+	void ChangeWeight(String W) {}
+
+	void ChangeSize(String SZ) {}
+
+}
+
+class XPencil extends XShape {
+
+	public void Draw() {}
+
+	public void MovePencil() {}
+
+	public void Reshape() {}
+
+}
+
+class XLine extends XShape {
+
+	public void Draw() {}
+
+	public void MoveShape(int NewX, int NewY) {}
+
+	public void Reshape() {}
+
+}
+
+class XArc extends XShape {
+
+	public void Draw() {}
+
+	public void MoveShape(int NewX, int NewY) {}
+
+	public void Reshape() {}
+
+}
+
+class XPolygon extends XShape {
+
+	public void Draw() {}
+
+	public void MoveShape(int NewX, int NewY) {}
+
+	public void Reshape() {}
+
+}
+
+class XEllipse extends XShape {
+
+	public void Draw() {}
+
+	public void MoveShape(int NewX, int NewY) {}
+
+	public void Reshape() {}
+
+}
+
+class XRectangle extends XShape {
+
+	public void Draw() {}
+
+	void SelectRectangle() {}
+
+	public void MoveShape(int NewX, int NewY) {}
+
+	public void Reshape() {}
+
+}
+
+class XPoint {
+
+	int X;
+
+	int Y;
+
+	public int GetX() {
+		return 1;
+	}
+
+	public int GetY() {
+		return 1;
+	}
+
+	public void SetPoint(int X, int Y) {}
+
+	public void MovePoint() {}
+
+}
+
+class XProperties {
+
+	int LineWidth;
+
+	String LineColor;
+
+	int Opacity;
+
+	int LineSize;
+
+	void SetProperties() {}
+
+	void ChangeWidth(int NewLW) {}
+
+	void ChangeOpacity(int Op) {}
+
+	void ChangeColor(String NewColor) {}
+
+	void ChangeSize(int LS) {}
+
+	void FillColorShape() {}
+
+}
+
+composition ProjectPicture {
+	container XProject project;
+	1 XPicture picture;
+}
+
+composition PictureShape {
+	container XPicture picture;
+	1..* XShape shape;
+}
+
+composition RectanglePoint {
+	container XRectangle rectangle;
+	2 XPoint point;
+}
+
+composition EllipsePoint {
+	container XEllipse ellipse;
+	2 XPoint point;
+}
+
+composition TextPoint {
+	container XText text;
+	2 XPoint point;
+}
+
+composition LinePoint {
+	container XLine line;
+	2 XPoint point;
+}
+
+composition PolygonPoint {
+	container XPolygon polygon;
+	// 3..*  XPoint point;
+	*  XPoint point;
+}
+
+composition ArcPoint {
+	container XArc arc;
+	// 3..* XPoint point;
+	* XPoint point;
+}
+
+composition ShapeProperties {
+	container XShape shape;
+	1 XProperties properties;
+}

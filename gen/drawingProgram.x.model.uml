@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_ZLf80KpvEeaDDOD3WrCWuw" name="drawingProgram">
+    <packageImport xmi:id="_ZL3JMKpvEeaDDOD3WrCWuw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://TXTUML_STDLIB/stdlib.uml#_DE5UMHLCEeWVx4ZuxFlarQ"/>
+    </packageImport>
+    <packageImport xmi:id="_ZNAYsKpvEeaDDOD3WrCWuw">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZTv54KpvEeaDDOD3WrCWuw" name="XPencil">
+      <generalization xmi:id="_ZTy9MKpvEeaDDOD3WrCWuw" general="_ZVQVwKpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZTwg8KpvEeaDDOD3WrCWuw" name="Draw" redefinedOperation="_ZVRj4KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZTwg8apvEeaDDOD3WrCWuw" name="MovePencil"/>
+      <ownedOperation xmi:id="_ZTxIAKpvEeaDDOD3WrCWuw" name="Reshape" redefinedOperation="_ZVSK8KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZTxIAapvEeaDDOD3WrCWuw" name="XPencil"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_ZT2nkKpvEeaDDOD3WrCWuw" name="ProjectOpen"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_ZT2nkapvEeaDDOD3WrCWuw" name="ProjectOpen" signal="_ZT2nkKpvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZT2nkqpvEeaDDOD3WrCWuw" name="#ProjectOpen_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_ZT4cwapvEeaDDOD3WrCWuw" name="ProjectOpen" specification="_ZT3OoKpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZT3OoKpvEeaDDOD3WrCWuw" name="ProjectOpen" isStatic="true" method="_ZT4cwapvEeaDDOD3WrCWuw">
+        <ownedParameter xmi:id="_ZT4cwKpvEeaDDOD3WrCWuw" name="signal" type="_ZT2nkKpvEeaDDOD3WrCWuw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZT98UKpvEeaDDOD3WrCWuw" name="XArc">
+      <generalization xmi:id="_ZUCNwKpvEeaDDOD3WrCWuw" general="_ZVQVwKpvEeaDDOD3WrCWuw"/>
+      <ownedAttribute xmi:id="_ZXGv4apvEeaDDOD3WrCWuw" name="point" type="_ZVdxIKpvEeaDDOD3WrCWuw" aggregation="composite" association="_ZXFhwKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZXHW8KpvEeaDDOD3WrCWuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZXHW8apvEeaDDOD3WrCWuw" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ZT-jYKpvEeaDDOD3WrCWuw" name="Draw" redefinedOperation="_ZVRj4KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZT_KcKpvEeaDDOD3WrCWuw" name="MoveShape" redefinedOperation="_ZVRj4apvEeaDDOD3WrCWuw">
+        <ownedParameter xmi:id="_ZT_xgKpvEeaDDOD3WrCWuw" name="NewX">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZT_xgapvEeaDDOD3WrCWuw" name="NewY">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZT_xgqpvEeaDDOD3WrCWuw" name="Reshape" redefinedOperation="_ZVSK8KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZUAYkKpvEeaDDOD3WrCWuw" name="XArc"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZUMl0KpvEeaDDOD3WrCWuw" name="XProperties">
+      <ownedAttribute xmi:id="_ZUNM4KpvEeaDDOD3WrCWuw" name="LineColor">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZUNM4apvEeaDDOD3WrCWuw" name="LineSize">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZUNM4qpvEeaDDOD3WrCWuw" name="LineWidth">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZUNM46pvEeaDDOD3WrCWuw" name="Opacity">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZUikEapvEeaDDOD3WrCWuw" name="shape" type="_ZVQVwKpvEeaDDOD3WrCWuw" association="_ZUikEKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZUjLIKpvEeaDDOD3WrCWuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZUjLIapvEeaDDOD3WrCWuw" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ZUNM5KpvEeaDDOD3WrCWuw" name="SetProperties"/>
+      <ownedOperation xmi:id="_ZUNz8KpvEeaDDOD3WrCWuw" name="ChangeWidth">
+        <ownedParameter xmi:id="_ZUNz8apvEeaDDOD3WrCWuw" name="NewLW">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZUNz8qpvEeaDDOD3WrCWuw" name="ChangeOpacity">
+        <ownedParameter xmi:id="_ZUObAKpvEeaDDOD3WrCWuw" name="Op">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZUObAapvEeaDDOD3WrCWuw" name="ChangeColor">
+        <ownedParameter xmi:id="_ZUObAqpvEeaDDOD3WrCWuw" name="NewColor">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZUObA6pvEeaDDOD3WrCWuw" name="ChangeSize">
+        <ownedParameter xmi:id="_ZUPCEKpvEeaDDOD3WrCWuw" name="LS">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZUPCEapvEeaDDOD3WrCWuw" name="FillColorShape"/>
+      <ownedOperation xmi:id="_ZUPCEqpvEeaDDOD3WrCWuw" name="XProperties"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_ZUT6kKpvEeaDDOD3WrCWuw" name="PictureDisabled"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_ZUT6kapvEeaDDOD3WrCWuw" name="PictureDisabled" signal="_ZUT6kKpvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZUT6kqpvEeaDDOD3WrCWuw" name="#PictureDisabled_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_ZUVvwapvEeaDDOD3WrCWuw" name="PictureDisabled" specification="_ZUUhoKpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZUUhoKpvEeaDDOD3WrCWuw" name="PictureDisabled" isStatic="true" method="_ZUVvwapvEeaDDOD3WrCWuw">
+        <ownedParameter xmi:id="_ZUVvwKpvEeaDDOD3WrCWuw" name="signal" type="_ZUT6kKpvEeaDDOD3WrCWuw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZUikEKpvEeaDDOD3WrCWuw" name="ShapeProperties" memberEnd="_ZUikEapvEeaDDOD3WrCWuw _ZVQ80KpvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZU0Q4KpvEeaDDOD3WrCWuw" name="RectanglePoint" memberEnd="_ZVdxIapvEeaDDOD3WrCWuw _ZVmUAapvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_ZU5JYKpvEeaDDOD3WrCWuw" name="PictureDisplayed"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_ZU5JYapvEeaDDOD3WrCWuw" name="PictureDisplayed" signal="_ZU5JYKpvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZU5JYqpvEeaDDOD3WrCWuw" name="#PictureDisplayed_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_ZU6-kapvEeaDDOD3WrCWuw" name="PictureDisplayed" specification="_ZU5wcKpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZU5wcKpvEeaDDOD3WrCWuw" name="PictureDisplayed" isStatic="true" method="_ZU6-kapvEeaDDOD3WrCWuw">
+        <ownedParameter xmi:id="_ZU6-kKpvEeaDDOD3WrCWuw" name="signal" type="_ZU5JYKpvEeaDDOD3WrCWuw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_ZU-o8KpvEeaDDOD3WrCWuw" name="ProjectClose"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_ZU-o8apvEeaDDOD3WrCWuw" name="ProjectClose" signal="_ZU-o8KpvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZU-o8qpvEeaDDOD3WrCWuw" name="#ProjectClose_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_ZVAeIapvEeaDDOD3WrCWuw" name="ProjectClose" specification="_ZU-o86pvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZU-o86pvEeaDDOD3WrCWuw" name="ProjectClose" isStatic="true" method="_ZVAeIapvEeaDDOD3WrCWuw">
+        <ownedParameter xmi:id="_ZVAeIKpvEeaDDOD3WrCWuw" name="signal" type="_ZU-o8KpvEeaDDOD3WrCWuw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZVKPIKpvEeaDDOD3WrCWuw" name="EllipsePoint" memberEnd="_ZVdxJKpvEeaDDOD3WrCWuw _ZYMVAapvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZVQVwKpvEeaDDOD3WrCWuw" name="XShape">
+      <ownedAttribute xmi:id="_ZVQ80KpvEeaDDOD3WrCWuw" name="properties" type="_ZUMl0KpvEeaDDOD3WrCWuw" aggregation="composite" association="_ZUikEKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZVQ80apvEeaDDOD3WrCWuw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZVQ80qpvEeaDDOD3WrCWuw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZYeo4KpvEeaDDOD3WrCWuw" name="picture" type="_ZV85UKpvEeaDDOD3WrCWuw" association="_ZYeB0KpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZYeo4apvEeaDDOD3WrCWuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZYfP8KpvEeaDDOD3WrCWuw" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ZVRj4KpvEeaDDOD3WrCWuw" name="Draw"/>
+      <ownedOperation xmi:id="_ZVRj4apvEeaDDOD3WrCWuw" name="MoveShape">
+        <ownedParameter xmi:id="_ZVRj4qpvEeaDDOD3WrCWuw" name="NewX">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZVRj46pvEeaDDOD3WrCWuw" name="NewY">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZVSK8KpvEeaDDOD3WrCWuw" name="Reshape"/>
+      <ownedOperation xmi:id="_ZVSK8apvEeaDDOD3WrCWuw" name="ChangeWidth">
+        <ownedParameter xmi:id="_ZVSK8qpvEeaDDOD3WrCWuw" name="NewLD">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZVSK86pvEeaDDOD3WrCWuw" name="ChangeOpacity">
+        <ownedParameter xmi:id="_ZVSyAKpvEeaDDOD3WrCWuw" name="Op">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZVSyAapvEeaDDOD3WrCWuw" name="ChangeColor">
+        <ownedParameter xmi:id="_ZVSyAqpvEeaDDOD3WrCWuw" name="NewColor">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZVSyA6pvEeaDDOD3WrCWuw" name="ChangeSize">
+        <ownedParameter xmi:id="_ZVTZEKpvEeaDDOD3WrCWuw" name="LS">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZVTZEapvEeaDDOD3WrCWuw" name="FillColorShape"/>
+      <ownedOperation xmi:id="_ZVTZEqpvEeaDDOD3WrCWuw" name="XShape"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZVdxIKpvEeaDDOD3WrCWuw" name="XPoint">
+      <ownedAttribute xmi:id="_ZVdxIapvEeaDDOD3WrCWuw" name="rectangle" type="_ZVmUAKpvEeaDDOD3WrCWuw" association="_ZU0Q4KpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZVdxIqpvEeaDDOD3WrCWuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZVdxI6pvEeaDDOD3WrCWuw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZVdxJKpvEeaDDOD3WrCWuw" name="ellipse" type="_ZYMVAKpvEeaDDOD3WrCWuw" association="_ZVKPIKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZVeYMKpvEeaDDOD3WrCWuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZVeYMapvEeaDDOD3WrCWuw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZVeYMqpvEeaDDOD3WrCWuw" name="X">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZVeYM6pvEeaDDOD3WrCWuw" name="Y">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZW5UgKpvEeaDDOD3WrCWuw" name="text" type="_ZX3k4KpvEeaDDOD3WrCWuw" association="_ZW4tcKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZW5UgapvEeaDDOD3WrCWuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZW57kKpvEeaDDOD3WrCWuw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZXGI0KpvEeaDDOD3WrCWuw" name="arc" type="_ZT98UKpvEeaDDOD3WrCWuw" association="_ZXFhwKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZXGI0apvEeaDDOD3WrCWuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZXGv4KpvEeaDDOD3WrCWuw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZYGOYKpvEeaDDOD3WrCWuw" name="polygon" type="_ZYTpwKpvEeaDDOD3WrCWuw" association="_ZYFnUKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZYGOYapvEeaDDOD3WrCWuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZYGOYqpvEeaDDOD3WrCWuw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZYny0apvEeaDDOD3WrCWuw" name="line" type="_ZXua8KpvEeaDDOD3WrCWuw" association="_ZYny0KpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZYny0qpvEeaDDOD3WrCWuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZYoZ4KpvEeaDDOD3WrCWuw" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ZVeYNKpvEeaDDOD3WrCWuw" name="GetX">
+        <ownedParameter xmi:id="_ZVe_QKpvEeaDDOD3WrCWuw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZVe_QapvEeaDDOD3WrCWuw" name="GetY">
+        <ownedParameter xmi:id="_ZVe_QqpvEeaDDOD3WrCWuw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZVe_Q6pvEeaDDOD3WrCWuw" name="SetPoint">
+        <ownedParameter xmi:id="_ZVfmUKpvEeaDDOD3WrCWuw" name="X">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZVfmUapvEeaDDOD3WrCWuw" name="Y">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZVfmUqpvEeaDDOD3WrCWuw" name="MovePoint"/>
+      <ownedOperation xmi:id="_ZVfmU6pvEeaDDOD3WrCWuw" name="XPoint"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZVmUAKpvEeaDDOD3WrCWuw" name="XRectangle">
+      <generalization xmi:id="_ZVpXUKpvEeaDDOD3WrCWuw" general="_ZVQVwKpvEeaDDOD3WrCWuw"/>
+      <ownedAttribute xmi:id="_ZVmUAapvEeaDDOD3WrCWuw" name="point" type="_ZVdxIKpvEeaDDOD3WrCWuw" aggregation="composite" association="_ZU0Q4KpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZVmUAqpvEeaDDOD3WrCWuw" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZVmUA6pvEeaDDOD3WrCWuw" value="2"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ZVmUBKpvEeaDDOD3WrCWuw" name="Draw" redefinedOperation="_ZVRj4KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZVm7EKpvEeaDDOD3WrCWuw" name="SelectRectangle"/>
+      <ownedOperation xmi:id="_ZVniIKpvEeaDDOD3WrCWuw" name="MoveShape" redefinedOperation="_ZVRj4apvEeaDDOD3WrCWuw">
+        <ownedParameter xmi:id="_ZVniIapvEeaDDOD3WrCWuw" name="NewX">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZVoJMKpvEeaDDOD3WrCWuw" name="NewY">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZVoJMapvEeaDDOD3WrCWuw" name="Reshape" redefinedOperation="_ZVSK8KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZVoJMqpvEeaDDOD3WrCWuw" name="XRectangle"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZV85UKpvEeaDDOD3WrCWuw" name="XPicture" classifierBehavior="_ZWAjsKpvEeaDDOD3WrCWuw">
+      <ownedAttribute xmi:id="_ZV85UapvEeaDDOD3WrCWuw" name="Extension">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZV85UqpvEeaDDOD3WrCWuw" name="FileName">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZV85U6pvEeaDDOD3WrCWuw" name="Path">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZXnGMapvEeaDDOD3WrCWuw" name="project" type="_ZWVT0KpvEeaDDOD3WrCWuw" association="_ZXnGMKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZXntQKpvEeaDDOD3WrCWuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZXntQapvEeaDDOD3WrCWuw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZYfP8apvEeaDDOD3WrCWuw" name="shape" type="_ZVQVwKpvEeaDDOD3WrCWuw" aggregation="composite" association="_ZYeB0KpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZYf3AKpvEeaDDOD3WrCWuw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZYf3AapvEeaDDOD3WrCWuw" value="*"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_ZWAjsKpvEeaDDOD3WrCWuw" name="XPicture">
+        <region xmi:id="_ZWAjsapvEeaDDOD3WrCWuw" name="XPicture">
+          <transition xmi:id="_ZWBx0apvEeaDDOD3WrCWuw" name="Initialize_Disabled" source="_ZWBKwKpvEeaDDOD3WrCWuw" target="_ZWBx0KpvEeaDDOD3WrCWuw"/>
+          <transition xmi:id="_ZWCY4KpvEeaDDOD3WrCWuw" name="Disabled_Displayed" source="_ZWBx0KpvEeaDDOD3WrCWuw" target="_ZWBKwapvEeaDDOD3WrCWuw">
+            <trigger xmi:id="_ZWC_8KpvEeaDDOD3WrCWuw" name="PictureDisplayed_trigger" event="_ZU5JYapvEeaDDOD3WrCWuw"/>
+          </transition>
+          <transition xmi:id="_ZWC_8apvEeaDDOD3WrCWuw" name="Displayed_Disabled" source="_ZWBKwapvEeaDDOD3WrCWuw" target="_ZWBx0KpvEeaDDOD3WrCWuw">
+            <trigger xmi:id="_ZWDnAKpvEeaDDOD3WrCWuw" name="PictureDisabled_trigger" event="_ZUT6kapvEeaDDOD3WrCWuw"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_ZWBKwKpvEeaDDOD3WrCWuw" name="Initialize"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ZWBKwapvEeaDDOD3WrCWuw" name="Displayed"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ZWBx0KpvEeaDDOD3WrCWuw" name="Disabled"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_ZV9gYKpvEeaDDOD3WrCWuw" name="Save">
+        <ownedParameter xmi:id="_ZV9gYapvEeaDDOD3WrCWuw" name="FN">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZV9gYqpvEeaDDOD3WrCWuw" name="P">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZV9gY6pvEeaDDOD3WrCWuw" name="SaveAs">
+        <ownedParameter xmi:id="_ZV-HcKpvEeaDDOD3WrCWuw" name="FN">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZV-HcapvEeaDDOD3WrCWuw" name="E">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZV-HcqpvEeaDDOD3WrCWuw" name="P">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZV-Hc6pvEeaDDOD3WrCWuw" name="SelectOne"/>
+      <ownedOperation xmi:id="_ZV-HdKpvEeaDDOD3WrCWuw" name="SelectAll"/>
+      <ownedOperation xmi:id="_ZV-ugKpvEeaDDOD3WrCWuw" name="UnSelectAll"/>
+      <ownedOperation xmi:id="_ZV-ugapvEeaDDOD3WrCWuw" name="MoveToFront"/>
+      <ownedOperation xmi:id="_ZV-ugqpvEeaDDOD3WrCWuw" name="MoveToBack"/>
+      <ownedOperation xmi:id="_ZV-ug6pvEeaDDOD3WrCWuw" name="Undo"/>
+      <ownedOperation xmi:id="_ZV-uhKpvEeaDDOD3WrCWuw" name="Redo"/>
+      <ownedOperation xmi:id="_ZV_VkKpvEeaDDOD3WrCWuw" name="Delete"/>
+      <ownedOperation xmi:id="_ZV_VkapvEeaDDOD3WrCWuw" name="XPicture"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZWVT0KpvEeaDDOD3WrCWuw" name="XProject" classifierBehavior="_ZWsgMKpvEeaDDOD3WrCWuw">
+      <ownedAttribute xmi:id="_ZWV64KpvEeaDDOD3WrCWuw" name="gui"/>
+      <ownedAttribute xmi:id="_ZXoUUKpvEeaDDOD3WrCWuw" name="picture" type="_ZV85UKpvEeaDDOD3WrCWuw" aggregation="composite" association="_ZXnGMKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZXoUUapvEeaDDOD3WrCWuw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZXoUUqpvEeaDDOD3WrCWuw" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_ZWsgMKpvEeaDDOD3WrCWuw" name="XProject">
+        <region xmi:id="_ZWsgMapvEeaDDOD3WrCWuw" name="XProject">
+          <transition xmi:id="_ZWtuUKpvEeaDDOD3WrCWuw" name="Init_Closed" source="_ZWsgMqpvEeaDDOD3WrCWuw" target="_ZWtHQapvEeaDDOD3WrCWuw"/>
+          <transition xmi:id="_ZWuVYKpvEeaDDOD3WrCWuw" name="Closed_Opened" source="_ZWtHQapvEeaDDOD3WrCWuw" target="_ZWtHQKpvEeaDDOD3WrCWuw">
+            <trigger xmi:id="_ZWu8cKpvEeaDDOD3WrCWuw" name="ProjectOpen_trigger" event="_ZT2nkapvEeaDDOD3WrCWuw"/>
+          </transition>
+          <transition xmi:id="_ZWu8capvEeaDDOD3WrCWuw" name="Opened_Closed" source="_ZWtHQKpvEeaDDOD3WrCWuw" target="_ZWtHQapvEeaDDOD3WrCWuw">
+            <trigger xmi:id="_ZWvjgKpvEeaDDOD3WrCWuw" name="ProjectClose_trigger" event="_ZU-o8apvEeaDDOD3WrCWuw"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_ZWsgMqpvEeaDDOD3WrCWuw" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ZWtHQKpvEeaDDOD3WrCWuw" name="Opened"/>
+          <subvertex xmi:type="uml:State" xmi:id="_ZWtHQapvEeaDDOD3WrCWuw" name="Closed"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_ZWo10KpvEeaDDOD3WrCWuw" name="XProject"/>
+      <ownedOperation xmi:id="_ZWqD8KpvEeaDDOD3WrCWuw" name="New"/>
+      <ownedOperation xmi:id="_ZWqrAKpvEeaDDOD3WrCWuw" name="Open">
+        <ownedParameter xmi:id="_ZWqrAapvEeaDDOD3WrCWuw" name="P">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZWqrAqpvEeaDDOD3WrCWuw" name="Import">
+        <ownedParameter xmi:id="_ZWrSEKpvEeaDDOD3WrCWuw" name="FN">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZWrSEapvEeaDDOD3WrCWuw" name="P">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZWrSEqpvEeaDDOD3WrCWuw" name="Export">
+        <ownedParameter xmi:id="_ZWrSE6pvEeaDDOD3WrCWuw" name="E">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZWr5IKpvEeaDDOD3WrCWuw" name="Close"/>
+      <ownedOperation xmi:id="_ZWr5IapvEeaDDOD3WrCWuw" name="Exit"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZW4tcKpvEeaDDOD3WrCWuw" name="TextPoint" memberEnd="_ZW5UgKpvEeaDDOD3WrCWuw _ZX3k4apvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZXFhwKpvEeaDDOD3WrCWuw" name="ArcPoint" memberEnd="_ZXGI0KpvEeaDDOD3WrCWuw _ZXGv4apvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZXnGMKpvEeaDDOD3WrCWuw" name="ProjectPicture" memberEnd="_ZXnGMapvEeaDDOD3WrCWuw _ZXoUUKpvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZXua8KpvEeaDDOD3WrCWuw" name="XLine">
+      <generalization xmi:id="_ZXxeQKpvEeaDDOD3WrCWuw" general="_ZVQVwKpvEeaDDOD3WrCWuw"/>
+      <ownedAttribute xmi:id="_ZYoZ4apvEeaDDOD3WrCWuw" name="point" type="_ZVdxIKpvEeaDDOD3WrCWuw" aggregation="composite" association="_ZYny0KpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZYoZ4qpvEeaDDOD3WrCWuw" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZYpA8KpvEeaDDOD3WrCWuw" value="2"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ZXua8apvEeaDDOD3WrCWuw" name="Draw" redefinedOperation="_ZVRj4KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZXvCAKpvEeaDDOD3WrCWuw" name="MoveShape" redefinedOperation="_ZVRj4apvEeaDDOD3WrCWuw">
+        <ownedParameter xmi:id="_ZXvpEKpvEeaDDOD3WrCWuw" name="NewX">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZXvpEapvEeaDDOD3WrCWuw" name="NewY">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZXvpEqpvEeaDDOD3WrCWuw" name="Reshape" redefinedOperation="_ZVSK8KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZXvpE6pvEeaDDOD3WrCWuw" name="XLine"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZX3k4KpvEeaDDOD3WrCWuw" name="XText">
+      <generalization xmi:id="_ZX9EcKpvEeaDDOD3WrCWuw" general="_ZVQVwKpvEeaDDOD3WrCWuw"/>
+      <ownedAttribute xmi:id="_ZX3k4apvEeaDDOD3WrCWuw" name="point" type="_ZVdxIKpvEeaDDOD3WrCWuw" aggregation="composite" association="_ZW4tcKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZX3k4qpvEeaDDOD3WrCWuw" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZX3k46pvEeaDDOD3WrCWuw" value="2"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZX3k5KpvEeaDDOD3WrCWuw" name="FontFamily">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZX4L8KpvEeaDDOD3WrCWuw" name="Size">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZX4L8apvEeaDDOD3WrCWuw" name="Style">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZX4L8qpvEeaDDOD3WrCWuw" name="Text">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZX4L86pvEeaDDOD3WrCWuw" name="Weight">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ZX4L9KpvEeaDDOD3WrCWuw" name="Draw" redefinedOperation="_ZVRj4KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZX4zAKpvEeaDDOD3WrCWuw" name="MoveShape" redefinedOperation="_ZVRj4apvEeaDDOD3WrCWuw">
+        <ownedParameter xmi:id="_ZX4zAapvEeaDDOD3WrCWuw" name="NewX">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZX5aEKpvEeaDDOD3WrCWuw" name="NewY">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZX5aEapvEeaDDOD3WrCWuw" name="Reshape" redefinedOperation="_ZVSK8KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZX5aEqpvEeaDDOD3WrCWuw" name="EditText"/>
+      <ownedOperation xmi:id="_ZX6BIKpvEeaDDOD3WrCWuw" name="ChangeTextFamily">
+        <ownedParameter xmi:id="_ZX6BIapvEeaDDOD3WrCWuw" name="T">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZX6BIqpvEeaDDOD3WrCWuw" name="ChangeFont">
+        <ownedParameter xmi:id="_ZX6BI6pvEeaDDOD3WrCWuw" name="F">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZX6oMKpvEeaDDOD3WrCWuw" name="ChangeStyle">
+        <ownedParameter xmi:id="_ZX6oMapvEeaDDOD3WrCWuw" name="S">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZX6oMqpvEeaDDOD3WrCWuw" name="ChangeWeight">
+        <ownedParameter xmi:id="_ZX7PQKpvEeaDDOD3WrCWuw" name="W">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZX7PQapvEeaDDOD3WrCWuw" name="ChangeSize">
+        <ownedParameter xmi:id="_ZX7PQqpvEeaDDOD3WrCWuw" name="SZ">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZX7PQ6pvEeaDDOD3WrCWuw" name="XText"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZYFnUKpvEeaDDOD3WrCWuw" name="PolygonPoint" memberEnd="_ZYGOYKpvEeaDDOD3WrCWuw _ZYTpwapvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZYMVAKpvEeaDDOD3WrCWuw" name="XEllipse">
+      <generalization xmi:id="_ZYOxQKpvEeaDDOD3WrCWuw" general="_ZVQVwKpvEeaDDOD3WrCWuw"/>
+      <ownedAttribute xmi:id="_ZYMVAapvEeaDDOD3WrCWuw" name="point" type="_ZVdxIKpvEeaDDOD3WrCWuw" aggregation="composite" association="_ZVKPIKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZYMVAqpvEeaDDOD3WrCWuw" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZYMVA6pvEeaDDOD3WrCWuw" value="2"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ZYMVBKpvEeaDDOD3WrCWuw" name="Draw" redefinedOperation="_ZVRj4KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZYM8EKpvEeaDDOD3WrCWuw" name="MoveShape" redefinedOperation="_ZVRj4apvEeaDDOD3WrCWuw">
+        <ownedParameter xmi:id="_ZYM8EapvEeaDDOD3WrCWuw" name="NewX">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZYM8EqpvEeaDDOD3WrCWuw" name="NewY">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZYM8E6pvEeaDDOD3WrCWuw" name="Reshape" redefinedOperation="_ZVSK8KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZYNjIKpvEeaDDOD3WrCWuw" name="XEllipse"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZYTpwKpvEeaDDOD3WrCWuw" name="XPolygon">
+      <generalization xmi:id="_ZYWtEKpvEeaDDOD3WrCWuw" general="_ZVQVwKpvEeaDDOD3WrCWuw"/>
+      <ownedAttribute xmi:id="_ZYTpwapvEeaDDOD3WrCWuw" name="point" type="_ZVdxIKpvEeaDDOD3WrCWuw" aggregation="composite" association="_ZYFnUKpvEeaDDOD3WrCWuw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZYTpwqpvEeaDDOD3WrCWuw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZYTpw6pvEeaDDOD3WrCWuw" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_ZYUQ0KpvEeaDDOD3WrCWuw" name="Draw" redefinedOperation="_ZVRj4KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZYUQ0apvEeaDDOD3WrCWuw" name="MoveShape" redefinedOperation="_ZVRj4apvEeaDDOD3WrCWuw">
+        <ownedParameter xmi:id="_ZYU34KpvEeaDDOD3WrCWuw" name="NewX">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ZYU34apvEeaDDOD3WrCWuw" name="NewY">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ZYU34qpvEeaDDOD3WrCWuw" name="Reshape" redefinedOperation="_ZVSK8KpvEeaDDOD3WrCWuw"/>
+      <ownedOperation xmi:id="_ZYU346pvEeaDDOD3WrCWuw" name="XPolygon"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZYeB0KpvEeaDDOD3WrCWuw" name="PictureShape" memberEnd="_ZYeo4KpvEeaDDOD3WrCWuw _ZYfP8apvEeaDDOD3WrCWuw"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZYny0KpvEeaDDOD3WrCWuw" name="LinePoint" memberEnd="_ZYny0apvEeaDDOD3WrCWuw _ZYoZ4apvEeaDDOD3WrCWuw"/>
+    <profileApplication xmi:id="_ZNA_wKpvEeaDDOD3WrCWuw">
+      <eAnnotations xmi:id="_ZNA_wapvEeaDDOD3WrCWuw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_ZTxvEKpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZTxIAapvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZT3OoapvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZT3OoKpvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZUA_oKpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZUAYkKpvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZUPpIKpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZUPCEqpvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZUUhoapvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZUUhoKpvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZU5wcapvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZU5wcKpvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZU_QAKpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZU-o86pvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZVUAIKpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZVTZEqpvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZVgNYKpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZVfmU6pvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZVowQKpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZVoJMqpvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZV_VkqpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZV_VkapvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZWpc4KpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZWo10KpvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZXwQIKpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZXvpE6pvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZX72UKpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZX7PQ6pvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZYNjIapvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZYNjIKpvEeaDDOD3WrCWuw"/>
+  <standard:Create xmi:id="_ZYVe8KpvEeaDDOD3WrCWuw" base_BehavioralFeature="_ZYU346pvEeaDDOD3WrCWuw"/>
+</xmi:XMI>
